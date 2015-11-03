@@ -1,34 +1,25 @@
 /* 
-Activité : jeu de devinette
+Activité : gestion des contacts
 */
 
-// NE PAS MODIFIER OU SUPPRIMER LES LIGNES CI-DESSOUS
-// COMPLETEZ LE PROGRAMME UNIQUEMENT APRES LE TODO
-
-console.log("Bienvenue dans ce jeu de devinette !");
-
-// Cette ligne génère aléatoirement un nombre entre 1 et 100
-var solution = Math.floor(Math.random() * 100) + 1;
-
-// Décommentez temporairement cette ligne pour mieux vérifier le programme
-console.log("(La solution est " + solution + ")");
-
 // TODO : complétez le programme
-var essai = 0;
+var contacts = [
+	["Carole", "Lévisse"],
+	["Mélodie", "Nelsonne"]
+];
 
-for (i = 1; i <= 6; i++) {
-	if (essai <= 6) {
-		var reponse = Number(prompt("Votre nombre ?"));
-		if (reponse < solution) {
-			console.log(reponse + " est trop petit !");
-			console.log("essai n° " + i + "/6");
-		} else if (reponse > solution) {
-			console.log(reponse + " est trop grand !");
-			console.log("essai n° " + i + "/6");
-		} else {
-			console.log("Bravo " + solution + " est le bon nombre ! :)");
-		};
-	} else {
-	console.log("Vous avez perdu :(");
+var menu = Number(prompt("Faites votre choix :\n1- Afficher la liste\n2- Ajouter contact\n0- quitter"));
+
+function ajouter() {
+	
+}
+
+if (menu === 1) {
+	for (i = 0; i < contacts.length; i++) {
+		console.log(contacts[i][0] + " " + contacts[i][1]);
 	};
+} else if (menu === 2) {
+	//function ajouter();
+} else {
+	console.log("Au revoir !");
 }
